@@ -1,3 +1,4 @@
+"use server";
 import { GoogleGenerativeAI, SchemaType } from "@google/generative-ai";
 
 export async function generateRecipes(prompt: string): Promise<string> {
