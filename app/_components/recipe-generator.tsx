@@ -40,7 +40,7 @@ export default function RecipeGenerator() {
                     type="text"
                     name="prompt"
                     id="prompt"
-                    placeholder="Enter your ingredients and get recipe suggestions"
+                    placeholder="Enter ingredients and get recipe suggestions"
                 />
                 <Button disabled={loading}>Send</Button>
             </form>

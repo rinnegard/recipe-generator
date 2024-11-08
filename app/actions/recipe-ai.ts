@@ -3,7 +3,7 @@ import { GoogleGenerativeAI, SchemaType } from "@google/generative-ai";
 
 export async function generateRecipes(prompt: string): Promise<string> {
     const schema = {
-        description: "List of recipes",
+        description: "List of recipes for food",
         type: SchemaType.ARRAY,
         items: {
             type: SchemaType.OBJECT,
@@ -34,7 +34,7 @@ export async function generateRecipes(prompt: string): Promise<string> {
                 instructions: {
                     type: SchemaType.STRING,
                     description:
-                        "Step by step instructions including quantities on how to cook the recipe. Format using Markdown.",
+                        "Step by step instructions including quantities on how to cook the recipe. Format as a list using Markdown.",
                     nullable: false,
                 },
             },
