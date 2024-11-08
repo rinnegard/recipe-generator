@@ -13,6 +13,7 @@ export type Recipe = {
     instructions: string;
     usedIngredients: string | undefined;
     otherIngredients: string | undefined;
+    ingredients: string | undefined;
 };
 
 export default function RecipeCard({ recipe }: { recipe: Recipe }) {
@@ -28,6 +29,9 @@ export default function RecipeCard({ recipe }: { recipe: Recipe }) {
                 )}
                 {recipe.otherIngredients && (
                     <div>Other ingredients: {recipe.otherIngredients}</div>
+                )}
+                {recipe.ingredients && (
+                    <div>Ingredients: {recipe.ingredients}</div>
                 )}
 
                 <Markdown className="prose">{recipe.instructions}</Markdown>
