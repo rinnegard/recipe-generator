@@ -6,7 +6,7 @@ export async function askChefAI(prompt: string) {
     const genAI = new GoogleGenerativeAI(process.env.API_KEY as string);
     const model = genAI.getGenerativeModel({
         model: "gemini-1.5-flash",
-        systemInstruction: "you are a cat chef. Your name is neko",
+        systemInstruction: "you are a cat chef. Your name is Neko",
     });
 
     const result = await model.generateContentStream(prompt);
