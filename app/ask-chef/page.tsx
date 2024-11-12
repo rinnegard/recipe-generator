@@ -31,9 +31,16 @@ export default function AskChefPage() {
 
     return (
         <div>
-            <h1>Ask A Chef</h1>
-            <form onSubmit={handleSubmit}>
-                <Input ref={inputRef} type="text" name="prompt"></Input>
+            <form
+                onSubmit={handleSubmit}
+                className="flex gap-2 max-w-screen-sm mx-auto"
+            >
+                <Input
+                    ref={inputRef}
+                    type="text"
+                    name="prompt"
+                    placeholder="Ask the chef..."
+                ></Input>
                 <Button>Send</Button>
             </form>
             <div>{answer}</div>

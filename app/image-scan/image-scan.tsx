@@ -22,7 +22,10 @@ export default function ImageScan() {
 
     return (
         <div>
-            <form onSubmit={handleSubmit}>
+            <form
+                onSubmit={handleSubmit}
+                className="flex gap-2 max-w-screen-sm mx-auto"
+            >
                 <Input
                     ref={inputRef}
                     type="file"
